@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 import config from "../config"
 import useInput from "../hooks/inputHook"
 import useAuthenticator from "./Authenticator"

@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react/cjs/react.development"
+import { useEffect, useState } from "react"
 import config from './../config'   
 import { bindActionCreators } from "redux"
 import { actionCreators } from "../state"       
