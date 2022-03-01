@@ -20,6 +20,9 @@ const Register = () => {
         axios.post(`${config.EntityServer}/user/`,data).then((res) => {
             if(res.data.result){
                 console.log(res.data.data)
+                resetUsername()
+                resetEmail()
+                resetPassword()
                 setMsg("Your Account has been registered, wait till it gets activated!")
             }
         })

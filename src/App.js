@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Entity from './components/Entity';
-import Navbar from './components/Navbar';
 import Video from './components/Video';
 import AddEntity from './components/AddEntity';
 import AddEpisode from './components/AddEpisode';

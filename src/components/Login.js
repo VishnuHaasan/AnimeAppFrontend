@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import config from "../config";
 import useInput from "../hooks/inputHook";
-import Authenticator from "./Authenticator";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../state";
 
@@ -33,6 +32,8 @@ const Login = () => {
                 console.log(data)
                 LogIn(data)
                 navigate('/redirect', {state: '/'})
+                resetEmail()
+                resetPassword()
             }
         }).catch(err => {
             console.log(err)

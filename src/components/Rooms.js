@@ -93,7 +93,7 @@ const Rooms = () => {
             }
             return(
                 <div className="m-10 order-1 min-w-[15%] max-w-[15%] hover:cursor-pointer border-4 border-cyan-500 shadow-lg shadow-cyan-500 h-fit" key={ele.room_id} id={ele.room_id} ep={ele.episode_no}>
-                    <img className="object-fit min-w-full min-h-[85%] max-h-85%]" src={`${config.ImageServer}/image/${ele.cover_url}`} />
+                    <img className="object-fit min-w-full min-h-[85%] max-h-85%]" src={`${config.ImageServer}/image/${ele.cover_url}`} alt="entityimage"/>
                     <div className="">
                     <p className="text-violet-500 font-jetbrains ml-2 mt-2">{ele.name}</p>
                     <p className='text-violet-500 font-jetbrains ml-2 mt-2'>{`Count: ${ele.count}`}</p>

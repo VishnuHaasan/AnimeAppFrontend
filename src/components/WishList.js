@@ -36,7 +36,7 @@ const WishList = () => {
         const comps = wishList.map(ele => {
             return(
                 <div className="m-10 order-1 min-w-[15%] max-w-[15%] hover:cursor-pointer border-4 border-cyan-500 shadow-lg shadow-cyan-500" onClick={onClick} key={ele.id} id={ele.id}>
-                    <img className="object-fit min-w-full min-h-[85%] max-h-85%]" src={`${config.ImageServer}/image/${ele.cover_url}`} />
+                    <img className="object-fit min-w-full min-h-[85%] max-h-85%]" src={`${config.ImageServer}/image/${ele.cover_url}`} alt="entityimage" />
                     <div className="">
                     <p className="text-violet-500 font-jetbrains">{ele.title}</p>
                     <p className="text-violet-500 font-jetbrains">{ele.rating}</p>

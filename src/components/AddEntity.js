@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useSelector } from "react-redux"
 import config from "../config"
 import useInput from "../hooks/inputHook"
@@ -20,7 +20,7 @@ const AddEntity = () => {
     const [token, setToken] = useState("")
     const [ad, setAd] = useState(false)
     const auth = useSelector(state => state.auth)
-    useAuthenticator((token) => {setAd(auth.isAdmin)})
+    useAuthenticator((token) => {setAd(auth.isAdmin);setToken(token)})
 
     const resetAll = () => {
         resetTitle()

@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 
-export default () => {
+export default WithNav = () => {
     return(
         <>
         <Navbar />

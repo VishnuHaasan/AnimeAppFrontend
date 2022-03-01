@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import useAuthenticator from "./Authenticator"
 import axios from "axios"
@@ -49,12 +48,10 @@ const Home = () => {
         navigate('/redirect',{state: `/entity/${id}`})
     }
     useEffect(() => {
-        let i = 11
         const comps = rating.map(ele => {
-            i -= 1
             return(
                 <div className="m-5 min-w-[15%] max-w-[15%] snap-center hover:cursor-pointer" onClick={onClick} key={v4()} id={ele.mongo_id}>
-                    <img className="object-fit min-h-[75%] max-h-[75%]" src={`${config.ImageServer}/image/${ele.cover_url}`} />
+                    <img className="object-fit min-h-[75%] max-h-[75%]" src={`${config.ImageServer}/image/${ele.cover_url}`} alt="entityimage"/>
                     <div className="">
                     <p className="text-violet-500 font-jetbrains">{ele.english}</p>
                     <p className="text-violet-500 font-jetbrains">{ele.rating}</p>
@@ -65,12 +62,10 @@ const Home = () => {
         setRatingComps(comps)
     },[rating])
     useEffect(() => {
-        let i = 11
         const comps = views.map(ele => {
-            i -= 1
             return(
                 <div className="m-5 min-w-[15%] max-w-[15%] snap-center hover:cursor-pointer" onClick={onClick} key={v4()} id={ele.mongo_id}>
-                    <img className="object-fit min-h-[75%] max-h-[75%]" src={`${config.ImageServer}/image/${ele.cover_url}`} />
+                    <img className="object-fit min-h-[75%] max-h-[75%]" src={`${config.ImageServer}/image/${ele.cover_url}`} alt="entityimage" />
                     <div className="">
                     <p className="text-violet-500 font-jetbrains">{ele.english}</p>
                     <p className="text-violet-500 font-jetbrains">{`Views: ${ele.views}`}</p>

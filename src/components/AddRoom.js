@@ -59,13 +59,6 @@ const AddRoom = () => {
         setOptions(res)
     },[entities])
 
-    const getEntityById = (id) => {
-        for(let i = 0;i < entities.length;i++){
-            if(entities[i].entity === id){
-                return entities[i]
-            }
-        }
-    }
     const onEntityChange = (e) => {
         setEntity(e.target.value)
     }
